@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --cor_fundo: #FAEEE5;
+    --cor_texto: #18334B;
+    --cor_destqaque: #566746;
+    --cor_constrate: #C9B79F;
+    --fonte: "Montserrat", "Century Gothic", sans-serif;
+}
