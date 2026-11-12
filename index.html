@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
+        <a href="index.html" class="logo">Projeto<span>.</span></a>
         <nav aria-label="Menu principal">
             <a href="index.html" aria-current="page">Início</a>
             <a href="about.html">Sobre nós</a>
@@ -15,9 +17,25 @@
 
     <main>
         <section id="hero">
-            <h1>Projeto</h1>
-            <p>Boas notícias sobre meio ambiente, responsabilidade social e governança.</p>
-            <a href="#meio-ambiente">Ver as notícias</a>
+            <img src="img/hero-tartaruga.jpg" alt="Tartaruga-verde nadando sob raios de sol" class="hero-bg">
+
+            <div class="hero-texto">
+                <h1>Projeto</h1>
+                <p>Boas notícias sobre meio ambiente, responsabilidade social e governança.</p>
+                <a href="#meio-ambiente" class="btn">Ver as notícias ↓</a>
+            </div>
+
+            <div class="ultimas">
+                <span class="ultimas-tag">Últimas</span>
+                <div class="ticker" id="ticker">
+                    <a href="#meio-ambiente">Ararinhas-azuis nascem em vida livre após reintrodução</a>
+                    <a href="#impacto-social">Plástico reciclado vira óculos gratuitos para crianças no RJ</a>
+                    <a href="#impacto-social">Energia solar leva eletricidade limpa a comunidades da Amazônia</a>
+                    <a href="#impacto-social">Programa Pró-Catador fortalece cooperativas de reciclagem</a>
+                    <a href="#impacto-social">Cozinhas Solidárias ampliam acesso à alimentação saudável</a>
+                    <a href="#impacto-social">Programa Cisternas garante água potável para famílias rurais</a>
+                </div>
+            </div>
         </section>
 
         <section id="meio-ambiente">
@@ -31,24 +49,76 @@
 
         <section id="impacto-social">
             <h2>Notícias de impacto social</h2>
-            <article>
-                <h3>Programa Pró-Catador apoia quem trabalha com reciclagem</h3>
-                <p>O programa busca fortalecer as organizações de catadores, melhorar as condições de trabalho e ampliar a coleta seletiva.</p>
-                <a href="https://www.gov.br/secretariageral/pt-br/procatador/programa-pro-catador">Conheça o programa</a>
-            </article>
-        </section>
 
-        <section id="animal">
-            <h2>Animal em destaque</h2>
-            <figure>
-                <img src="img/tartaruga-verde.jpg" alt="Tartaruga-verde nadando acima de um fundo rochoso" width="220">
-                <figcaption>Tartaruga-verde. Foto de <a href="https://commons.wikimedia.org/wiki/File:Green_Sea_Turtle_(43781715354).jpg">James Watt/NOAA</a>.</figcaption>
-            </figure>
+            <div class="carrossel-wrap">
+                <button type="button" id="prev" class="seta seta-esq" aria-label="Anterior">←</button>
+
+                <div class="carrossel" id="carrossel">
+                <article class="card">
+                    <img src="img/social-oculos.jpg" alt="Armações de óculos feitas com plástico reciclado">
+                    <div class="card-info">
+                        <h3>Plástico reciclado vira óculos gratuitos para crianças no RJ</h3>
+                        <div class="card-extra">
+                            <p>O projeto Recicla Visão transforma resíduos plásticos em armações e oferece exames de vista gratuitos para estudantes de 8 a 14 anos.</p>
+                            <a href="https://agenciabrasil.ebc.com.br/radioagencia-nacional/meio-ambiente/audio/2025-10/projeto-recicla-plastico-para-criar-oculos-para-criancas-no-rj" target="_blank" rel="noopener noreferrer">Ler notícia completa →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="img/social-solar.jpg" alt="Casa ribeirinha com painéis solares na Amazônia">
+                    <div class="card-info">
+                        <h3>Energia solar leva eletricidade limpa a comunidades da Amazônia</h3>
+                        <div class="card-extra">
+                            <p>Sistemas fotovoltaicos do Programa Luz para Todos garantem energia contínua para famílias ribeirinhas, indígenas e quilombolas.</p>
+                            <a href="https://enbpar.gov.br/wp-content/uploads/2025/10/Estudo-sobre-a-utilizacao-de-sistemas-isolados-como-solucao-para-areas-remotas-da-Amazonia-Legal-no-ambito-do-Programa-Luz-para-Todos-1-1.pdf" target="_blank" rel="noopener noreferrer">Ver detalhes da ação →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="img/social-reciclagem.jpg" alt="Trabalhador separando garrafas plásticas para reciclagem">
+                    <div class="card-info">
+                        <h3>Programa Pró-Catador fortalece cooperativas de reciclagem</h3>
+                        <div class="card-extra">
+                            <p>Iniciativa apoia organizações de catadores, melhora as condições de trabalho e amplia a coleta seletiva em todo o país.</p>
+                            <a href="https://www.gov.br/secretariageral/pt-br/procatador/programa-pro-catador" target="_blank" rel="noopener noreferrer">Conheça o programa →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="img/social-alimentacao.jpg" alt="Cesta de vegetais e alimentos orgânicos frescos">
+                    <div class="card-info">
+                        <h3>Cozinhas Solidárias ampliam acesso à alimentação saudável</h3>
+                        <div class="card-extra">
+                            <p>Redes comunitárias distribuem refeições gratuitas e fortalecem o apoio alimentar em áreas urbanas vulneráveis.</p>
+                            <a href="https://www.gov.br/mds/pt-br/acoes-e-programas/inclusao-produtiva-rural/cozinha-solidaria" target="_blank" rel="noopener noreferrer">Saiba mais no MDS →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="img/social-agua.jpg" alt="Sistema de captação de água da chuva em zona rural">
+                    <div class="card-info">
+                        <h3>Programa Cisternas garante água potável para famílias rurais</h3>
+                        <div class="card-extra">
+                            <p>Tecnologias sociais de captação de água da chuva promovem saúde, autonomia hídrica e produção sustentável no campo.</p>
+                            <a href="https://www.gov.br/mds/pt-br/acoes-e-programas/acesso-a-agua-1/programa-cisternas" target="_blank" rel="noopener noreferrer">Ver detalhes da ação →</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+                <button type="button" id="next" class="seta seta-dir" aria-label="Próximo">→</button>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>Projeto · Atividade Somativa 1 de Fundamentos de Programação Web</p>
     </footer>
+
+    <script src="script/script.js" defer></script>
 </body>
 </html>

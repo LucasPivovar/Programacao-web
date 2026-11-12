@@ -7,3 +7,374 @@
     --cor_constrate: #C9B79F;
     --fonte: "Montserrat", "Century Gothic", sans-serif;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--cor_fundo);
+    color: var(--cor_texto);
+    font-family: var(--fonte);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: var(--cor_fundo);
+    border-bottom: 1px solid var(--cor_constrate);
+}
+
+.logo {
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--cor_texto);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--cor_destqaque);
+}
+
+nav {
+    display: flex;
+    gap: 0.75rem;
+}
+
+nav a {
+    color: var(--cor_texto);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.45rem 0.85rem;
+    border-radius: 6px;
+    user-select: none;
+}
+
+nav a[aria-current="page"],
+nav a:hover {
+    color: var(--cor_destqaque);
+    background: rgba(86, 103, 70, 0.12);
+}
+
+/* Hero */
+#hero {
+    position: relative;
+    min-height: calc(100vh - 65px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    border-bottom: 1px solid var(--cor_constrate);
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    animation: oceanDrift 18s ease-in-out infinite alternate;
+}
+
+.hero-texto {
+    position: relative;
+    z-index: 1;
+    margin: auto 0;
+    padding: 3.5rem 5%;
+    max-width: 560px;
+}
+
+.hero-texto h1 {
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    color: #FFFFFF;
+    margin: 0 0 1rem;
+}
+
+.hero-texto p {
+    font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+    color: var(--cor_fundo);
+    margin: 0 0 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--cor_destqaque);
+    color: #FFFFFF;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.9rem 1.8rem;
+    border-radius: 8px;
+    user-select: none;
+    transition: transform 0.15s ease, filter 0.2s ease;
+}
+
+.btn:hover {
+    filter: brightness(1.1);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* Carrossel "Últimas" */
+.ultimas {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.9rem 5%;
+    background: var(--cor_fundo);
+    border-top: 1px solid var(--cor_constrate);
+}
+
+.ultimas-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--cor_destqaque);
+    padding-right: 1.25rem;
+    border-right: 1px solid var(--cor_constrate);
+}
+
+.ticker {
+    flex: 1;
+    display: flex;
+    gap: 3rem;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.ticker a {
+    flex-shrink: 0;
+    color: var(--cor_texto);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.ticker a:hover {
+    color: var(--cor_destqaque);
+    text-decoration: underline;
+}
+
+/* Carrossel de Impacto Social */
+#impacto-social {
+    padding: 3.5rem 5%;
+    border-top: 1px solid var(--cor_constrate);
+}
+
+#impacto-social h2 {
+    font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+    margin: 0 0 1.75rem;
+}
+
+.carrossel-wrap {
+    position: relative;
+}
+
+.seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid var(--cor_constrate);
+    background: #FFFFFF;
+    color: var(--cor_texto);
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(24, 51, 75, 0.12);
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.seta:hover {
+    background: var(--cor_destqaque);
+    border-color: var(--cor_destqaque);
+    color: #FFFFFF;
+}
+
+.seta-esq {
+    left: -21px;
+}
+
+.seta-dir {
+    right: -21px;
+}
+
+.carrossel {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.carrossel::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    position: relative;
+    flex: 0 0 calc((100% - 4.5rem) / 4);
+    height: 360px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--cor_constrate);
+    scroll-snap-align: start;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.card-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 82%;
+    z-index: 2;
+    padding: 0.85rem 1rem;
+    background: #FFFFFF;
+    border-bottom-right-radius: 12px;
+    transition: width 0.3s ease, padding 0.3s ease, border-radius 0.3s ease;
+}
+
+.card-info h3 {
+    font-size: 0.92rem;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.card-extra {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, opacity 0.25s ease, margin-top 0.3s ease;
+}
+
+.card-extra p {
+    font-size: 0.85rem;
+    margin: 0 0 0.9rem;
+    opacity: 0.85;
+}
+
+.card-extra a {
+    display: inline-block;
+    background: var(--cor_destqaque);
+    color: #FFFFFF;
+    font-size: 0.86rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+}
+
+.card:hover img {
+    transform: scale(1.04);
+}
+
+.card:hover .card-info {
+    width: 100%;
+    padding: 1.15rem;
+    border-bottom-right-radius: 0;
+    border-bottom: 1px solid var(--cor_constrate);
+}
+
+.card:hover .card-extra {
+    max-height: 220px;
+    opacity: 1;
+    margin-top: 0.65rem;
+}
+
+footer {
+    padding: 2rem 5%;
+    border-top: 1px solid var(--cor_constrate);
+    font-size: 0.88rem;
+    opacity: 0.8;
+}
+
+footer p {
+    margin: 0;
+}
+
+@keyframes oceanDrift {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+@media (max-width: 1024px) {
+    .card {
+        flex: 0 0 calc((100% - 1.5rem) / 2);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-bg {
+        object-position: 70% center;
+    }
+
+    .ultimas {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .ultimas-tag {
+        border-right: none;
+        padding-right: 0;
+    }
+
+    .card {
+        flex: 0 0 88%;
+        height: 320px;
+    }
+
+    .seta-esq {
+        left: 0.5rem;
+    }
+
+    .seta-dir {
+        right: 0.5rem;
+    }
+}
+
+@media (hover: none) {
+    .card-info {
+        width: 100%;
+        padding: 1.15rem;
+        border-bottom-right-radius: 0;
+        border-bottom: 1px solid var(--cor_constrate);
+    }
+
+    .card-extra {
+        max-height: 220px;
+        opacity: 1;
+        margin-top: 0.65rem;
+    }
+}
