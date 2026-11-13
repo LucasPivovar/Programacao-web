@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar sugestão | ESG News</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">ESG News<span>🌱</span></a>
+        <nav aria-label="Menu principal">
+            <a href="index.html">Início</a>
+            <a href="about.html">Sobre nós</a>
+            <a href="form.html" aria-current="page">Contato e Sugestão</a>
+        </nav>
+    </header>
+    <main class="pagina-formulario">
+        <section class="cartao-formulario">
+            <div class="introducao-formulario">
+                <p class="rotulo-pagina">PARTICIPE DO ESG NEWS</p>
+                <h1>Compartilhe uma boa notícia!</h1>
+                <p>
+                    Conhece alguma iniciativa positiva relacionada ao meio ambiente,
+                    impacto social ou governança? Compartilhe com a gente!
+                </p>
+                <!-- revisar se vale a pena deixar isso ou n -->
+                <p class="aviso-formulario">
+                    Este formulário é demonstrativo. Os dados serão exibidos
+                    na próxima página, mas não serão enviados por e-mail
+                    nem armazenados em um banco de dados.
+                </p>
+            </div>
+
+            <!-- Formulário: GET envia os dados pela URL para formAction.html. -->
+            <form class="formulario-sugestao" action="formAction.html" method="GET" autocomplete="on">
+                <fieldset class="campos-formulario">
+                    <div class="grupo-campo">
+                        <label for="nome">Seu nome</label>
+
+                        <input type="text" id="nome" name="nome" placeholder="Ex.: Mariana Batista" minlength="3" maxlength="60" pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s'-]{3,60}" title="Digite de 3 a 60 caracteres, utilizando letras e espaços." required >
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="email">Seu e-mail</label>
+
+                        <input type="email" id="email" name="email" placeholder="exemplo@email.com" maxlength="120" required>
+                    </div>
+                    <div class="grupo-campo">
+                        <label for="titulo">Título da notícia</label>
+
+                        <input type="text" id="titulo" name="titulo" placeholder="Ex.: Projeto de energia renovável" minlength="5" maxlength="100" title="O título precisa ter entre 5 e 100 caracteres." required>
+                    </div>
+                    <div class="grupo-campo">
+                        <label for="categoria">Categoria ESG</label>
+                        <select id="categoria" name="categoria" required >
+                            <option value="" selected disabled>
+                                Selecione uma categoria
+                            </option>
+                            <option value="ambiental">Meio ambiente</option>
+                            <option value="social">Impacto social</option>
+                            <option value="governanca">Governança</option>
+                        </select>
+                    </div>
+
+                    <!-- Campo de link: type=url verifica o formato de endereço eletrônico. -->
+                    <div class="grupo-campo">
+                        <label for="link">Link da notícia</label>
+
+                        <input
+                            type="url"
+                            id="link"
+                            name="link"
+                            placeholder="https://www.exemplo.com/noticia"
+                            maxlength="300"
+                            required
+                        >
+                    </div>
+
+                    <!-- Textarea permite escrever uma descrição maior da iniciativa. -->
+                    <div class="grupo-campo">
+                        <label for="descricao">Conte um pouco sobre a notícia</label>
+
+                        <textarea
+                            id="descricao"
+                            name="descricao"
+                            placeholder="Explique brevemente a notícia..."
+                            minlength="20"
+                            maxlength="500"
+                            required
+                        ></textarea>
+
+                        <small class="ajuda-campo">
+                            Escreva entre 20 e 500 caracteres.
+                        </small>
+                    </div>
+
+                </fieldset>
+                <div class="acoes-formulario">
+                    <button type="submit" class="botao-formulario">
+                        Enviar sugestão
+                    </button>
+                    <button type="reset" class="botao-secundario">
+                        Limpar formulário
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto · Atividade Somativa 1 de Fundamentos de Programação Web</p>
+    </footer>
+
+</body>
+</html>

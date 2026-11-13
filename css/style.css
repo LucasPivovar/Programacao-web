@@ -3,7 +3,7 @@
 :root {
     --cor_fundo: #FAEEE5;
     --cor_texto: #18334B;
-    --cor_destqaque: #566746;
+    --cor_destaque: #566746;
     --cor_constrate: #C9B79F;
     --fonte: "Montserrat", "Century Gothic", sans-serif;
 }
@@ -47,7 +47,7 @@ header {
 }
 
 .logo span {
-    color: var(--cor_destqaque);
+    color: var(--cor_destaque);
 }
 
 nav {
@@ -67,7 +67,7 @@ nav a {
 
 nav a[aria-current="page"],
 nav a:hover {
-    color: var(--cor_destqaque);
+    color: var(--cor_destaque);
     background: rgba(86, 103, 70, 0.12);
 }
 
@@ -117,7 +117,7 @@ nav a:hover {
 
 .btn {
     display: inline-block;
-    background: var(--cor_destqaque);
+    background: var(--cor_destaque);
     color: #FFFFFF;
     font-weight: 600;
     text-decoration: none;
@@ -152,7 +152,7 @@ nav a:hover {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--cor_destqaque);
+    color: var(--cor_destaque);
     padding-right: 1.25rem;
     border-right: 1px solid var(--cor_constrate);
 }
@@ -174,7 +174,7 @@ nav a:hover {
 }
 
 .ticker a:hover {
-    color: var(--cor_destqaque);
+    color: var(--cor_destaque);
     text-decoration: underline;
 }
 
@@ -211,8 +211,8 @@ nav a:hover {
 }
 
 .seta:hover {
-    background: var(--cor_destqaque);
-    border-color: var(--cor_destqaque);
+    background: var(--cor_destaque);
+    border-color: var(--cor_destaque);
     color: #FFFFFF;
 }
 
@@ -286,7 +286,7 @@ nav a:hover {
 
 .card-extra a {
     display: inline-block;
-    background: var(--cor_destqaque);
+    background: var(--cor_destaque);
     color: #FFFFFF;
     font-size: 0.86rem;
     font-weight: 600;
@@ -388,4 +388,261 @@ footer p {
     padding: 10px 0;
     width: 90%;
     margin: 0 auto;
+    text-align: justify;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+
+.texto_descricaoesg {
+    text-align:justify;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+
+.caixa_sobre {
+    padding: 10px 0;
+    width: 90%;
+    margin: 0 auto;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+.link_github {
+    text-decoration: none;
+    background-color: var(--cor_destaque);
+    color: var(--cor_fundo);
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 35%;
+}
+.link_linkedin{
+    text-decoration: none;
+    background-color: var(--cor_destaque);
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 24%;
+    color: var(--cor_fundo);
+}
+
+.mariana, .lucas {
+    border-radius: 15px;
+    border-color: var(--cor_destaque);
+    border: 1px solid;
+    padding: 15px;
+    width:40%;
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.55)
+}
+
+.caixa_equipe {
+    display: flex;
+    gap: 30px
+}
+
+.caixa_sobre_texto {
+    border-radius: 15px;
+    border-color: var(--cor_destaque);
+    border: 1px solid;
+    padding: 15px;
+    width:100%;
+    background-color: rgba(255, 255, 255, 0.55)
+}
+
+/* ESTILIZAÇÃO DO FORMULÁRIO E RECEBIMENTO */
+
+/* Define a largura e centraliza o conteúdo das duas páginas. */
+.pagina-formulario {
+    width: min(900px, 90%);
+    margin: 3rem auto;
+}
+
+/* Cria uma caixa visual para agrupar o conteúdo da página. */
+.cartao-formulario {
+    padding: clamp(1.25rem, 3vw, 2.5rem);
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--cor_constrate);
+    border-radius: 16px;
+}
+
+/* Organiza a apresentação inicial do formulário. */
+.introducao-formulario {
+    margin-bottom: 2rem;
+}
+
+/* Destaca o pequeno texto acima do título principal. */
+.rotulo-pagina {
+    color: var(--cor_destaque);
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+}
+
+/* Ajusta o título principal das páginas. */
+.introducao-formulario h1 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    line-height: 1.2;
+    margin: 0.5rem 0 1rem;
+}
+
+/* Estiliza o aviso sobre o funcionamento demonstrativo do formulário. */
+.aviso-formulario {
+    padding: 1rem;
+    background: rgba(86, 103, 70, 0.1);
+    border-left: 4px solid var(--cor_destaque);
+    border-radius: 6px;
+}
+
+/* Organiza os campos e os botões verticalmente. */
+.formulario-sugestao {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* Remove a borda padrão do agrupamento de campos. */
+.campos-formulario {
+    display: grid;
+    gap: 1.2rem;
+    border: none;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+}
+
+/* Destaca o título do conjunto de campos. */
+.campos-formulario legend {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* Organiza cada campo, seu rótulo e sua orientação. */
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+/* Destaca os nomes dos campos. */
+.grupo-campo label {
+    font-weight: 600;
+}
+
+/* Padroniza a aparência dos campos de texto, seleção e descrição. */
+.grupo-campo input,
+.grupo-campo select,
+.grupo-campo textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--cor_constrate);
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: var(--cor_texto);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+/* Define a altura inicial da área de descrição. */
+.grupo-campo textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+/* Destaca visualmente o campo que está recebendo a digitação. */
+.grupo-campo input:focus,
+.grupo-campo select:focus,
+.grupo-campo textarea:focus {
+    outline: 2px solid var(--cor_destaque);
+    outline-offset: 2px;
+}
+
+/* Formata os textos menores que orientam o preenchimento. */
+.ajuda-campo {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+/* Organiza os botões lado a lado, permitindo que quebrem linha. */
+.acoes-formulario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Aplica o mesmo formato básico aos botões e links de ação. */
+.botao-formulario,.botao-secundario {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 46px;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Aplica a cor de destaque ao botão principal. */
+.botao-formulario {
+    background: var(--cor_destaque);
+    color: #FFFFFF;
+}
+
+/* Cria um botão secundário sem preencher o fundo. */
+.botao-secundario {
+    background: transparent;
+    border-color: var(--cor_constrate);
+    color: var(--cor_texto);
+}
+
+/* Adiciona uma reação visual ao passar o mouse pelos botões. */
+.botao-formulario:hover,.botao-secundario:hover {
+    filter: brightness(0.95);
+}
+
+/* Estiliza a mensagem de confirmação ou ausência de dados. */
+.mensagem-resultado {
+    padding: 1rem;
+    background: rgba(86, 103, 70, 0.1);
+    border-radius: 8px;
+}
+
+/* Organiza os dados recebidos em uma lista vertical de caixas. */
+.lista-dados {
+    display: grid;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+/* Cria uma caixa individual para cada informação enviada. */
+.item-dado {
+    padding: 1rem;
+    background: #FFFFFF;
+    border: 1px solid var(--cor_constrate);
+    border-radius: 8px;
+}
+
+/* Destaca o nome de cada informação recebida. */
+.item-dado h2 {
+    color: var(--cor_destaque);
+    font-size: 1rem;
+    margin: 0 0 0.4rem;
+}
+
+/* Permite que textos longos e links sejam apresentados sem estourar a caixa. */
+.item-dado p {
+    margin: 0;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+}
+
+/* Adapta os botões para telas pequenas, colocando um embaixo do outro. */
+@media (max-width: 600px) {
+
+    .acoes-formulario {
+        flex-direction: column;
+    }
+
+    /* Faz cada botão ocupar toda a largura disponível. */
+    .acoes-formulario > * {
+        width: 100%;
+    }
 }
