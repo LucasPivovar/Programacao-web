@@ -179,12 +179,12 @@ nav a:hover {
 }
 
 /* Carrossel de Impacto Social */
-#impacto-social {
+#impacto-social, #governanca, #meio-ambiente {
     padding: 3.5rem 5%;
     border-top: 1px solid var(--cor_constrate);
 }
 
-#impacto-social h2 {
+#impacto-social h2, #governanca h2, #meio-ambiente h2 {
     font-size: clamp(1.5rem, 2.5vw, 2.1rem);
     margin: 0 0 1.75rem;
 }
@@ -377,4 +377,15 @@ footer p {
         opacity: 1;
         margin-top: 0.65rem;
     }
+}
+/* Carrossel caixa desing */
+.caixa_carossel {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.esg_oqe {
+    padding: 10px 0;
+    width: 90%;
+    margin: 0 auto;
 }

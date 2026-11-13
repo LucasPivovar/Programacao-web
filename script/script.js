@@ -49,14 +49,29 @@ function criarCarrosselContinuo(el, velocidade) {
     }
   };
 }
+// Carrossel contínuo mais lento de meio ambiente
+const carrosselMeioAmbiente = criarCarrosselContinuo(document.getElementById("carrossel-meio-ambiente"), 0.25);
+
+if (carrosselMeioAmbiente) {
+  document.getElementById("prevM")?.addEventListener("click", () => carrosselMeioAmbiente.mover(-1));
+  document.getElementById("nextM")?.addEventListener("click", () => carrosselMeioAmbiente.mover(1));
+}
 
 // Ticker contínuo abaixo do hero
 criarCarrosselContinuo(document.getElementById("ticker"), 0.7);
 
 // Carrossel contínuo mais lento de impacto social
-const carrosselSocial = criarCarrosselContinuo(document.getElementById("carrossel"), 0.25);
+const carrosselSocial = criarCarrosselContinuo(document.getElementById("carrosselSocial"), 0.25);
 
 if (carrosselSocial) {
-  document.getElementById("prev")?.addEventListener("click", () => carrosselSocial.mover(-1));
-  document.getElementById("next")?.addEventListener("click", () => carrosselSocial.mover(1));
+  document.getElementById("prevS")?.addEventListener("click", () => carrosselSocial.mover(-1));
+  document.getElementById("nextS")?.addEventListener("click", () => carrosselSocial.mover(1));
+}
+
+// Carrossel contínuo mais lento de governança
+const carrosselGovernanca = criarCarrosselContinuo(document.getElementById("carrossel-governanca"), 0.25);
+
+if (carrosselGovernanca) {
+  document.getElementById("prevG")?.addEventListener("click", () => carrosselGovernanca.mover(-1));
+  document.getElementById("nextG")?.addEventListener("click", () => carrosselGovernanca.mover(1));
 }
